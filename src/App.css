@@ -182,8 +182,7 @@
     border-right-color: var(--border);
   }
 }
-<<<<<<< HEAD
-=======
+
 .container{
   display:flex;
   flex-direction:row;
@@ -202,4 +201,4 @@ article img{
   border-radius: 10px;
 
 }
->>>>>>> 3e2cb6334c45754f84cfaf26b8a72727d6c75f68
+
