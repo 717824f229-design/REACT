@@ -1,5 +1,13 @@
 import React from 'react'
 
+<<<<<<< HEAD
+function Welcome() {
+    const db="Wipro Dashboard"
+  return (
+    <div>
+        <h2>Welcome to your {db}.</h2>
+        </div>
+=======
 function Welcome({name,dept,year}) {
     const db="Wipro Dashboard";
     
@@ -9,6 +17,7 @@ function Welcome({name,dept,year}) {
        
     </div>
     
+>>>>>>> 3e2cb6334c45754f84cfaf26b8a72727d6c75f68
   )
 }
 
