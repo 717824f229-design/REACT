@@ -182,3 +182,24 @@
     border-right-color: var(--border);
   }
 }
+<<<<<<< HEAD
+=======
+.container{
+  display:flex;
+  flex-direction:row;
+  gap:20px;
+  justify-content:center;
+  margin-top:20px;
+}
+article{
+  border:1px solid #ccc;
+  background-color: beige;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+article img{
+  border-radius: 10px;
+
+}
+>>>>>>> 3e2cb6334c45754f84cfaf26b8a72727d6c75f68

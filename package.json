@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "reacttask1",
+=======
+  "name": "fsjreactapp",
+>>>>>>> 3e2cb6334c45754f84cfaf26b8a72727d6c75f68
   "private": true,
   "version": "0.0.0",
   "type": "module",

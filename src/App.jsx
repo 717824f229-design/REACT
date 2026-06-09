@@ -1,5 +1,6 @@
 
 import './App.css'
+<<<<<<< HEAD
 import Contact from './component/Contact'
 import Employee from './component/Employee'
 import Greeting from './component/Greeting'
@@ -21,6 +22,15 @@ function App() {
     <br></br>
     <Contact/>
     <br></br>
+=======
+import Chocolate from './component/Chocolate'
+
+function App() {
+
+  return (
+    <>
+    <Chocolate/>
+>>>>>>> 3e2cb6334c45754f84cfaf26b8a72727d6c75f68
     </>
   )
 }
