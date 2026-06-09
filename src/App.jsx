@@ -1,6 +1,6 @@
 
 import './App.css'
-import Mode from './component/Mode'
+import Spread from './component/Spread'
 
 
 
@@ -8,7 +8,7 @@ import Mode from './component/Mode'
 function App() {
   return (
     <>
-<Mode/>
+<Spread/>
 </>
 )
 }
