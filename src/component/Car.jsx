@@ -1,16 +1,20 @@
 import React from 'react'
-import wagonR from '../assets/wagonR.jpg'
-function Car(props) {
-    const car={name:"WagonR",color:"Black",model:"LXI 2025",pic:wagonR}
+import cars from './cars.js'
+function Car() {
   return (
     <div>
-        <h3>Car Details</h3>
-        <img src={car.pic} height="100px" width="95px"/>
-        <p>Name:{car.name}</p>
-        <p>Color:{car.color}</p>
-        <p>Model:{car.model}</p>
-       <p> Rating:{props.rating}</p>
+       <h3>Car Details</h3>
+        <div class="container">
+        {cars.map((car,index)=>{
+          return(<article key={index}>
+         <p><img src={car.url} height="120px" width="120px" alt="Car"/></p>
+        <h4>Model:{car.name}</h4>
+        <h4>Color:{car.color}</h4>
+        <h4>Price:{car.price}</h4>
+        </article>)
+        })}
         </div>
+    </div>
   )
 }
 
