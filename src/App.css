@@ -208,5 +208,45 @@ h4{
   font-style: oblique;
   font-weight:bolder;
 }
+.navbar {
+ background-color: black;
+ padding: 15px;
+}
+.navbar a {
+ color: white;
+ text-decoration: none;
+ margin-right: 20px;
+}
+navbar a.active {
+ color: yellow;
+ font-weight: bold;
+}
+.home,
+.result {
+ text-align: center;
+ margin-top: 40px;
+}
+input {
+ padding: 10px;
+ width: 250px;
+}
+button {
+ padding: 10px 20px;
+ margin-left: 10px;
+ cursor: pointer;
+}
+table {
+ margin: auto;
+ margin-top: 20px;
+ border-collapse: collapse;
+ width: 60%;
+}
+th,
+td {
+ padding: 10px;
+}
+.error {
+ color: red;
+}
 
 
