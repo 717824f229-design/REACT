@@ -1,17 +1,23 @@
 
 import './App.css'
-import Spread from './component/Spread'
-import Car from './component/Car'
-
-
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import React from 'react';
+import Home from "./component/Home";
+import Result from "./component/Result";
 
 function App() {
   return (
-    <>
-      <Car/>
-<Spread/>
-</>
-)
+    <BrowserRouter>
+      <nav className="navbar">
+        <NavLink to="/">Home</NavLink>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/result/:regno" element={<Result />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
