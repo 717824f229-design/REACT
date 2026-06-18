@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p id="text">Hello World!</p>
+        <button onclick="toggleText()">Toggle</button>
+        <script>
+           function toggleText(){
+            let element=document.getElementById("text");
+            if(element.style.display==="none"){
+                element.style.display="block";
+            }
+            else{
+                element.style.display="none";
+            }
+           }
+        </script>
+    </body>
+</html>

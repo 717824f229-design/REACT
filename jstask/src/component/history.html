@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            let calculator={
+                 history:[],
+             add(a,b){
+                let add=a+b;
+                this.history.push(`${a}+${b}=${add}`);
+                return add;
+             },
+             subtract(a,b){
+                let sub=a-b;
+                this.history.push(`${a}-${b}=${sub}`);
+                return sub;
+             },
+             multiply(a,b){
+                let mul=a*b;
+                this.history.push(`${a}*${b}=${mul}`);
+                return mul;
+             },
+             divide(a,b){
+                let div=a/b;
+                this.history.push(`${a}/${b}=${div}`);
+                return div;
+             },
+             showHistory(){
+                 console.log("History Details:");
+            if(this.history.length===0){
+                console.log("No calculations performed yet");
+            }
+            else{
+                this.history.forEach(entry => {
+                    console.log(entry);
+                });
+            }
+             }
+            };
+            console.log(calculator.add(10,2));
+            console.log(calculator.subtract(4,2));
+            console.log(calculator.multiply(5,2));
+            console.log(calculator.divide(12,3));
+           calculator.showHistory();
+        </script>
+    </body>
+</html>

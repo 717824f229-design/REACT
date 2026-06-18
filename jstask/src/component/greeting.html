@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function delayGreeting(name,seconds){
+                return new Promise((resolve)=>{
+                    setTimeout(()=>{
+                        resolve(`Hello,${name}!`);
+                    },seconds*1000);
+                });
+            }
+            delayGreeting("Alex",1).then((message)=>{
+                console.log(message);
+            });
+        </script>
+    </body>
+</html>

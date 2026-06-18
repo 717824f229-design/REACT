@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            let movies=['Thullatha Manamum Thullum','Seetha Ramam','29','Poove poochudavaa','Bigil'];
+            console.log("Initial Array:",movies);
+            let movie=prompt("Enter a movie:");
+            movies.push(movie);
+            console.log("After adding:",movies);
+            let temp=[];
+            for(let i=2;i<movies.length;i++){
+                if(i!=movies.length-1)
+               movies[i]=movies[i+1];
+            else
+                movies.pop();
+           }
+            console.log("After removing third item:",movies);
+        </script>
+    </body>
+</html>

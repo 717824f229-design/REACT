@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function processStep(stepName,inputData,delayMs){
+                return new Promise((resolve)=>{
+                    setTimeout(()=>{
+                        console.log(`Completed: ${stepName} with data [${inputData}]`);
+                        resolve(inputData+`->${stepName}`);
+                    },delayMs);
+                });
+            }
+            function runSequentialPipeline(){
+                console.log("Starting pipeline...");
+                processStep("Step 1:Authenticate User","User_ID:101",500)
+            .then((result1)=>{
+                return processStep("Step 2:Fetch Profile Data",result1,400);
+            })
+        .then((result2)=>{
+            return processStep("Step 3:Generate Access Token",result2,300);
+        })
+    .then((finalResult)=>{
+        console.log("\n Pipeline finished successfully!");
+        console.log("Final Output Stack:",finalResult);
+    })
+.catch((error)=>{
+    console.error("An error broke the pipeline sequence:",error.message);
+});
+
+            }
+            runSequentialPipeline();
+        </script>
+    </body>
+</html>

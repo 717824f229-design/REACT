@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function createBankAccount(initialBalance){
+                let balance=initialBalance;
+                const transactionLog=[`Account opened with $${initialBalance}`];
+                return{
+                    deposit(amount){
+                        if(amount>0){
+                            balance+=amount;
+                            transactionLog.push(`Deposited $${amount}`);
+                            return `Success.Current balance:$${balance}`;
+                        }
+                        return "Invalid deposit amount.";
+                    },
+                    withdraw(amount){
+                        if(amount>0 && amount<=balance){
+                            balance-=amount;
+                            transactionLog.push(`Withdrew $${amount}`);
+                            return `Success.Current balance:$${balance}`;
+                        }
+                        return "Invalid amount or insufficient funds.";
+                    },
+                    getHistory(){
+                        return [...transactionLog];
+                    }
+                };
+            }
+            const myAccount=createBankAccount(100);
+            console.log(myAccount.deposit(50));
+            console.log(myAccount.withdraw(30));
+        </script>
+    </body>
+</html>

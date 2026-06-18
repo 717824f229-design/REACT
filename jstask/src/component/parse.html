@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function serializeAndParse(obj){
+                const jsonString=JSON.stringify(obj);
+                console.log("Serialized String:",jsonString);
+                const parsedObj=JSON.parse(jsonString);
+                return parsedObj;
+            }
+            const originalUser={
+                id:101,
+                username:"dev_wizard",
+                isActive:true,
+                roles:["admin","editor"]
+            };
+            const result=serializeAndParse(originalUser);
+            console.log("Parsed Object:",result);
+        </script>
+    </body>
+</html>

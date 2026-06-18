@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function makeCounter(){
+                let count=0;
+                return {
+                    increment(){
+                    count+=1;
+                    return count;
+                },
+            getCount(){
+                return count;
+            }
+        };
+    }
+            const counterA = makeCounter();
+            const counterB=makeCounter();
+            console.log(counterA.increment());
+             console.log(counterB.increment());
+            console.log(counterA.getCount());
+             console.log(counterB.getCount());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function countWays(n){
+            if(n===0)
+                return 1;
+            if(n<0)
+            return 0;
+                return countWays(n-1)+countWays(n-2)+countWays(n-3);
+            
+            
+            }
+            let n=Number(prompt("Enter a number to find the number of ways to climb:"));
+            console.log("Distinct ways:",countWays(n));
+        </script>
+    </body>
+</html>

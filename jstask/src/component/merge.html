@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function mergeObjects(obj1,obj2){
+                return {...obj1,...obj2};
+            }
+            const user={name:"Alice",role:"Developer"};
+            const contact={email:"alex@gmail.com",role:"Senior Developer"};
+            const merged=mergeObjects(user,contact);
+            console.log(merged);
+        </script>
+    </body>
+</html>

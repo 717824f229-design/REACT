@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function deepClone(obj){
+                return JSON.parse(JSON.stringify(obj));
+            }
+            const original={
+                name:"Kavya",
+                age:20,
+                address:{
+                    city:"Coimbatore",
+                    zip:641008
+                },
+                hobbies:["reading","coding"]
+            };
+            const clone=deepClone(original);
+            clone.address.city="Chennai";
+            console.log(original.address.city);
+        </script>
+    </body>
+</html>

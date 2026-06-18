@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+          let days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+          let sunday=days.shift();
+          let temp=[];
+          while(days.length>0){
+            let day=days.shift();
+            temp.unshift(day);
+          }
+          days.unshift(sunday);
+          while(temp.length>0){
+            let res=temp.shift();
+            days.unshift(res);
+          }
+          console.log(days);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function randomOutcomePromise(){
+                return new Promise((resolve,reject)=>{
+                    const randomNumber=Math.random();
+                    console.log(`Generated Number:${randomNumber.toFixed(4)}`);
+                if(randomNumber>=0.5){
+                    resolve("Success! The operation completed smoothly.");
+                }
+                else{
+                    reject(new Error("Failure: The operation randomly failed."));
+                }
+                });
+            }
+            randomOutcomePromise()
+            .then((successMessage)=>{
+                console.log("Resolved:",successMessage);
+            })
+            .catch((error)=>{
+                console.log("Rejected:",error.message);
+            });
+        </script>
+    </body>
+</html>

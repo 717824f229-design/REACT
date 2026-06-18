@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+          let letters=['a','b','c'];
+          function addBeginEnd(letter){
+            letters.push(letter);
+            letters.unshift(letter);
+            console.log(letters);
+          }
+          let letter=prompt("Enter the letter:");
+          addBeginEnd(letter);
+        </script>
+    </body>
+</html>

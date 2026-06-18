@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            let circle={
+                radius:0,
+                calculateArea(radius){
+                    let area=Math.PI*this.radius*this.radius;
+                    return `Area of the Circle:${area.toFixed(2)}`;
+                },
+                calculateDiameter(radius){
+                    let diameter=2*this.radius;
+                    return `Diameter of the Circle:${diameter}`;
+                },
+                calculateCircumference(radius){
+                    let circumference=2*Math.PI*this.radius;
+                    return `Circumference of the Circle:${circumference.toFixed(2)}`;
+                }
+            };
+            circle.radius=10;
+            console.log(circle.calculateArea());
+            console.log(circle.calculateDiameter());
+            console.log(circle.calculateCircumference());
+            circle.radius=20;
+            console.log(circle.calculateArea());
+            console.log(circle.calculateDiameter());
+            console.log(circle.calculateCircumference());
+        </script>
+    </body>
+</html>

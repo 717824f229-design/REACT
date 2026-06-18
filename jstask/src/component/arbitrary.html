@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function sumAll(...numbers){
+                return numbers.reduce((total,num)=>total+num,0);
+            }
+            console.log(sumAll(1,2,3,4,5));
+            console.log(sumAll(10,20,30));
+            console.log(sumAll());
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <img id="myImage" src="C:\Users\acer\Downloads\car.jpg" width=""200>
+        <button onclick="changeImage()">Change Attribute</button>
+        <script>
+           function changeImage(){
+            let img=document.getElementById("myImage");
+            console.log("Old Source:",img.getAttribute("src"));
+           img.setAttribute("src","C:/Users/acer/Downloads/chocolate.jpg");
+            console.log("New Source:",img.getAttribute("src"));
+           }
+        </script>
+    </body>
+</html>

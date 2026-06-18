@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            let book={
+                title:"Tangled",
+                author:"Ben Smiley",
+                yearPublished:2010,
+                 getSummary(){
+                   return `${this.title} is an interesting story book written by ${this.author} in ${this.yearPublished}`;
+                },
+                age(){
+                    let current=2026;
+                    let years=current-this.yearPublished;
+                    return `The book is ${years} years old`;
+                }
+            };
+            console.log(book.getSummary());
+            console.log(book.age());
+        </script>
+    </body>
+</html>
