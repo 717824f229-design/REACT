@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function sumArray(arr){
+                const add=(...args)=>args.reduce((total,num)=>total+num,0); 
+                return add(...arr);
+            }
+            const numbersList=[10,15,25];
+            console.log(sumArray(numbersList));
+            console.log(sumArray([]));
+        </script>
+    </body>
+</html>

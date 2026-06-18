@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Top and Bottom Script</title>
+        <script>
+        console.log("Top Script!");
+        var headText=document.querySelector("h1");
+        console.log("Head Text:",headText);
+        </script>
+    </head>
+    <body> 
+        <h1>Body of the document</h1>
+        <script>
+            console.log("Bottom Script!");
+            var bottomText=document.querySelector("h1");
+            console.log("Bottom Text:",bottomText.textContent);
+        </script>
+    </body>
+</html>

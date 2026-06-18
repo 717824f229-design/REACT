@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            let calculator={
+                x:10,
+                y:5,
+                add(){
+                    let add=this.x+this.y;
+                   return `Addition:${add}`;
+                },
+                subtract(){
+                  let sub=this.x-this.y;
+                  return `Subtraction:${sub}`;
+                },
+                multiply(){
+                    let mul=this.x*this.y;
+                    return `Multiplication:${mul}`;
+                },
+                divide(){
+                    let div=this.x/this.y;
+                    return `Division:${div}`;
+                }
+            };
+            console.log(calculator.add());
+            console.log(calculator.subtract());
+            console.log(calculator.multiply());
+            console.log(calculator.divide());
+        </script>
+    </body>
+</html>

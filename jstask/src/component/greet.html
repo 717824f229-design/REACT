@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            let person={
+                name:"",
+              increaseAge(age){
+                let increase=++age;
+                 return increase;
+              },
+              decreaseAge(age){
+                let decrease=--age;
+                return decrease;
+              },
+              greet(newname){
+                this.name=newname;
+                return `Hello!${this.name}`;
+              }
+            
+            };
+            let age=Number(prompt("Enter age:"));
+            if(age<=0){
+                console.log("Age is zero or negative,only increase method will be performed");
+                console.log(person.increaseAge(age));
+            }else{
+                console.log(person.increaseAge(age));
+                console.log(person.decreaseAge(age));
+            }
+            console.log(person.greet("Alice"));
+           
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function createMultiplier(factor){
+                return function(number){
+                    return number*factor;
+                };
+            }
+            const double=createMultiplier(2);
+            const triple=createMultiplier(3);
+            const halves=createMultiplier(0.5);
+            console.log(double(10));
+            console.log(triple(10));
+            console.log(halves(10));
+        </script>
+    </body>
+</html>

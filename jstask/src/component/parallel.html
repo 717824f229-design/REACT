@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function fetchMultipleUsers(userIds){
+                const safeIds=Array.isArray(userIds)?userIds:[userIds].filter(Boolean);
+                const mockFetch=(id)=>{
+                    return new Promise((resolve)=>{
+                        setTimeout(()=>{
+                            resolve({
+                                id:id,
+                                name:`User ${id}`,
+                                status:"Active"
+                            });
+                        },300);
+                    });
+                };
+                const promiseArray=safeIds.map(id=>mockFetch(id));
+                return Promise.all(promiseArray);
+            }
+            const targetIds=[1,2,3];
+                fetchMultipleUsers(targetIds)
+                .then((results)=>{
+                    console.log("All Data Fetched Successfully:",results);
+                })
+                .catch((error)=>{
+                    console.error("One of the requests failed:",error.message);
+                });
+        </script>
+    </body>
+</html>

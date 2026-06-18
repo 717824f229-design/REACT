@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function createCounter(){
+                let count=0;
+                return {
+                    increment(){
+                    count+=1;
+                    return count;
+                },
+            getCount(){
+                return count;
+            }
+        };
+    }
+            const myCounter = createCounter();
+            console.log(myCounter.getCount());
+             console.log(myCounter.increment());
+            console.log(myCounter.increment());
+             console.log(myCounter.getCount());
+        </script>
+    </body>
+</html>

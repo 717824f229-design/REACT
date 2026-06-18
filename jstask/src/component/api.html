@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function fetchAndProcessUser(userId){
+                const mockFetch=()=>{
+                    return Promise.resolve({
+                        
+                                ok:true,
+                                status:200,
+                                json:()=>Promise.resolve({
+                                    id:userId,
+                                    name:"Kavya Shri",
+                                    email:"kavya@gmail.com"
+                                    
+                                })
+                            });
+                        
+                };
+                return mockFetch()
+                    .then((response)=>{
+                        if(!response.ok){
+                            throw new Error(`HTTP error! Status:${response.status}`);
+                        }
+                        return response.json();
+                    })
+                
+                .then((userData)=>{
+                    return{
+                        id:userData.id,
+                        name:userData.name,
+                        email:userData.email,
+                        companyName:userData.company?.name || "Unknown Company"
+                    };
+                });
+            }
+            fetchAndProcessUser(1)
+            .then((processedUser)=>{
+                console.log("Processed Data:",processedUser);
+            })
+            .catch((error)=>{
+                console.error("An error occurred along the chain:",error.message);
+            });
+        </script>
+    </body>
+</html>

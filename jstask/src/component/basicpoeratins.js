@@ -1,0 +1,10 @@
+var a=15;
+var b=15;
+const add=a+b;
+const sub=a-b;
+const mul=a*b;
+const div=a/b;
+console.log("Addition:",add);
+console.log("Subtraction:",sub);
+console.log("Multiplication:",mul);
+console.log("Division:",div);
